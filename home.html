@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+          background-color: #121212;   
+        }
+        #page
+        {
+            display:flex;
+            height: 100vh;
+        }
+        #sidebar{
+            width: 250px;
+             background-color: #121212;
+              color: white;
+            padding: 20px;
+        }
+        #content{
+            background-color: #1e1e1e;
+           color: white;
+           padding: 20px;
+           flex-grow: 1;
+           overflow-y: auto;
+        }
+        #songs{
+             display: grid;
+              gap: 20px;
+              margin-top: 20px;
+              grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+     }
+     .song{
+        background-color: #2a2a2a;
+        padding: 25px;
+        text-align: center;
+        border-radius: 5px;
+        transition: 0.3s;
+     }
+     .song:hover{
+        background-color: #1db954;  
+        color: black;                
+         cursor: pointer; 
+     }
+     #a1 ul{
+        list-style: none;
+     }
+     #a1 ul li{
+        margin-top: 40px;
+         background-color: #2a2a2a;
+         padding: 25px;
+         text-align: center;
+         border-radius: 8px;
+         transition: 0.3s;
+         margin-left: -30px;
+         
+     }
+    #a1 ul li:hover{
+         background-color: #1db954;  
+        color: black;                
+         cursor: pointer; 
+    }
+    #player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #181818;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    color: white;
+}
+#controls ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 15px;
+}
+
+#controls ul li button {
+    
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: black;
+}
+#song-section {
+    overflow-x: auto;      
+    padding-bottom: 10px;
+
+}
+
+#songs{
+     display: grid;
+    grid-template-columns: repeat(4, 1fr);        
+    gap: 20px;
+}
+    </style>
+</head>
+<body>
+  
+    <div id="page">
+        <div id="sidebar">
+            <div id="a">
+              <img src="https://static.vecteezy.com/system/resources/previews/042/148/631/non_2x/spotify-logo-spotify-social-media-icon-free-png.png" width="170px"/>
+            </div>
+            <div id="a1">
+                <ul>
+                    <li>HOME</li>
+                    <li>SEARCH</li>
+                    <li>YOUR LIBRARY</li>
+                    <li>PLAYLIST</li>
+                </ul>
+            </div>
+        </div>
+     <div id="content">
+            <div id="song-selection">
+                <div id="songs">
+                    <div class="song" onclick="Bc()">
+                        <img src="https://i0.wp.com/www.socialnews.xyz/wp-content/uploads/2018/12/17/emai-poyave-song-stills-from-padi-padi-leche-manasu-13.jpg?quality=80&zoom=1&ssl=1" width="150px" />
+                        <br/><br/>
+                        <h4>Emai pothane</h4>
+                        <p>Sid sriram</p>
+                    
+
+                    </div>
+                    <div class="song" onclick="Ac()">
+                        <img src="https://i.scdn.co/image/ab67616d0000b273c5abad22bd4a83f1f26feb54" width="150px"/>
+                        <h4>Urike Urike</h4>
+                        <p>Sid sriram</p>
+                    </div>
+                    <div class="song" onclick="Cc()">
+                        <img src="https://i.scdn.co/image/ab67616d0000b27388bf05e1f61408f4164879bb" width="150px"/><br/>
+                        <h4>Inkem Inkem Kavalee</h4>
+                        <p>Sid sriram</p>
+                    </div>
+                    <div class="song" onclick="H()">
+                        <img src="https://i.ytimg.com/vi/RR2bBR6s-HY/maxresdefault.jpg" width="150px"/><br/><br/><br/>
+                        <h4>Adiga Adiga</h4>
+                        <p>Sid sriram</p>
+                    </div>
+                     <div class="song" onclick="Dc()">
+                        <img src="https://i.ytimg.com/vi/UEAayZwvP4A/maxresdefault.jpg" width="150px"/>
+                        <h4>ninnila ninnila</h4>
+                        <p>Aarmaan mallik</p>
+                    </div>
+                    <div class="song" onclick="K()">
+                       <img src="https://i.ytimg.com/vi/uBS9d9ZG-n4/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AHUBoAC4AOKAgwIABABGF4gXiheMA8=&rs=AOn4CLBPjOPIc_C9OrtcL2VH74oseyerDA" width="150px"/>
+                       <h4>manasaaa</h4>
+                       <p>sid sriram</p>
+                    </div>
+                    <div class="song" onclick="E()">
+                        <img src="https://i.ytimg.com/vi/_KhOZM3MjRU/maxresdefault.jpg" width="150px"/><br/>
+                        <h4>prema velluva</h4>
+                        <p>Sid sriram</p>
+                    </div>
+                    
+                    <div class="song" onclick="FA()">
+                        <img src="https://c.saavncdn.com/121/Premam2-Telugu-2016-500x500.jpg" width="150px"/>
+                        <h4>Evare</h4>
+                        <p>Sri krishna</p>
+                    </div>
+                    <div class="song" onclick="G()">
+                        <img src="https://tse3.mm.bing.net/th/id/OIP.Ou7D5asXEHN2jtdMEu5PrQHaDW?rs=1&pid=ImgDetMain&o=7&rm=3" width="150px"/>
+                        <h4>areyreye manasa</h4>
+                        <p>Sid sriram</p>
+                    </div>
+                    <div class="song" onclick="F()">
+                        <img src="https://i.ytimg.com/vi/DDb7OILQMMA/maxresdefault.jpg" width="150px"/>
+                        <h4>em sandhehamledhu</h4>
+                        <p>sunitha</p>
+                    </div>
+                    <div class="song" onclick="J()">
+                        <img src="https://i.ytimg.com/vi/2OhhFkF3MqQ/maxresdefault.jpg" width="150px"/>
+                        <h4>Ringa Ringa</h4>
+                        <p>Devi sriprasad</p>
+                    </div>
+                    
+                </div>
+            </div>
+         </div>
+         
+    </div>
+    <div id="player">
+        <div id="song-info">
+            <strong>Song Name</strong>
+        </div>
+        <div id="controls">
+            <ul>
+                <li>
+            <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.6 9.6 0 0 0 7.556 8a9.6 9.6 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.6 10.6 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.6 9.6 0 0 0 6.444 8a9.6 9.6 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5"/>
+  <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192m0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192"/>
+</svg></button>
+                </li>
+                <li>
+<button>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-skip-start-fill" viewBox="0 0 16 16">
+  <path d="M4 4a.5.5 0 0 1 1 0v3.248l6.267-3.636c.54-.313 1.232.066 1.232.696v7.384c0 .63-.692 1.01-1.232.697L5 8.753V12a.5.5 0 0 1-1 0z"/>
+</svg>
+</button>
+                </li>
+                <li>
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pause-circle-fill" viewBox="0 0 16 16">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.25 5C5.56 5 5 5.56 5 6.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C7.5 5.56 6.94 5 6.25 5m3.5 0c-.69 0-1.25.56-1.25 1.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C11 5.56 10.44 5 9.75 5"/>
+</svg>
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-skip-end-fill" viewBox="0 0 16 16">
+  <path d="M12.5 4a.5.5 0 0 0-1 0v3.248L5.233 3.612C4.693 3.3 4 3.678 4 4.308v7.384c0 .63.692 1.01 1.233.697L11.5 8.753V12a.5.5 0 0 0 1 0z"/>
+</svg>
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div id="volume">
+
+        </div>
+    </div>
+    <audio id="audioplayer"></audio>
+    <script>
+const audio = document.getElementById("audioplayer");
+const songInfo = document.getElementById("song-info");
+
+function Bc(){
+   audio.src = "songs/emaipoyave.mp3"; 
+   audio.play();                       
+   songInfo.innerHTML = "Emai Pothane"; 
+}
+   function Ac()
+ {
+    audio.src="songs/urike urike.mpeg.wav";
+    audio.play();
+    songInfo.innerHTML ="Urike Urike"
+ }
+ function Cc()
+ {
+    audio.src="songs/inkem.mp3";
+    audio.play();
+    songInfo.innerHTML="Inkem inkem"
+ }
+ function Dc()
+ {
+    audio.src="songs/ninnila.mp3.wav";
+    audio.play();
+    songInfo.innerHTML="ninnila"
+ }
+ function E()
+ {
+    audio.src="songs/premavelluva.mp3.wav";
+    audio.play();
+    songInfo.innerHTML="premavelluva"
+ }
+ function FA()
+ {
+    audio.src="songs/evare.mp3.wav";
+    audio.play();
+    songInfo.innerHTML="Evare"
+ }
+ function G()
+ {
+   audio.src="songs/areyrey manasa.mp3.wav";
+   audio.play();
+   songInfo.innerHTML="Areyreye manasaa"  
+ }
+ function F()
+ {
+    audio.src="songs/emsandheham.mp3.mp3";
+    audio.play();
+    songInfo.innerHTML="em sandhehamledhu"
+ }
+ function H()
+ {
+    audio.src="songs/adiga adiga.mp3.mpeg.wav";
+    audio.play();
+    songInfo.innerHTML="Adiga Adiga"
+ }
+ function J()
+ {
+    audio.src="songs/ringa.mp3.wav";
+    audio.play();
+    songInfo.innerhtml="Ringa Ringa"
+ }
+ function K()
+ {
+    audio.src="songs/manasaa.mp3.mp3";
+    audio.play();
+    songInfo.innerHTML="Manasaa"
+ }
+</script>
+
+
+</body>
+</html>
